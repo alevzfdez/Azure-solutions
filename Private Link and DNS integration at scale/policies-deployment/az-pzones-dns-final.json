@@ -1,0 +1,236 @@
+[
+  { 
+    "resource_provider": ["Microsoft.Automation/automationAccounts/publicNetworkAccess"],
+    "subresource": "Webhook",
+    "condition": "false",
+    "private_zone": ["privatelink.azure-automation.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Automation/automationAccounts/publicNetworkAccess"],
+    "subresource": "DSCAndHybridWorker",
+    "condition": "false",
+    "private_zone": ["privatelink.azure-automation.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Sql/servers/publicNetworkAccess"],
+    "subresource": "sqlServer",
+    "condition": "false",
+    "private_zone": ["privatelink.database.windows.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Synapse/workspaces/publicNetworkAccess"],
+    "subresource": "Sql",
+    "condition": "false",
+    "private_zone": ["privatelink.sql.azuresynapse.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Synapse/workspaces/publicNetworkAccess"],
+    "subresource": "SqlOnDemand",
+    "condition": "false",
+    "private_zone": ["privatelink.sql.azuresynapse.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Synapse/workspaces/publicNetworkAccess"],
+    "subresource": "Dev",
+    "condition": "false",
+    "private_zone": ["privatelink.dev.azuresynapse.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Synapse/workspaces/publicNetworkAccess"],
+    "subresource": "Web",
+    "condition": "false",
+    "private_zone": ["privatelink.azuresynapse.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DocumentDB/databaseAccounts/publicNetworkAccess"],
+    "subresource": "SQL",
+    "condition": "false",
+    "private_zone": ["privatelink.documents.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DocumentDB/databaseAccounts/publicNetworkAccess"],
+    "subresource": "MongoDB",
+    "condition": "false",
+    "private_zone": ["privatelink.mongo.cosmos.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DocumentDB/databaseAccounts/publicNetworkAccess"],
+    "subresource": "Cassandra",
+    "condition": "false",
+    "private_zone": ["privatelink.cassandra.cosmos.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DocumentDB/databaseAccounts/publicNetworkAccess"],
+    "subresource": "Gremlin",
+    "condition": "false",
+    "private_zone": ["privatelink.gremlin.cosmos.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DocumentDB/databaseAccounts/publicNetworkAccess"],
+    "subresource": "Table",
+    "condition": "false",
+    "private_zone": ["privatelink.table.cosmos.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DBforPostgreSQL/servers/publicNetworkAccess"],
+    "subresource": "postgresqlServer",
+    "condition": "false",
+    "private_zone": ["privatelink.postgres.database.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DBforMySQL/servers/publicNetworkAccess"],
+    "subresource": "mysqlServer",
+    "condition": "false",
+    "private_zone": ["privatelink.mysql.database.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DBforMariaDB/servers/publicNetworkAccess"],
+    "subresource": "mariadbServer",
+    "condition": "false",
+    "private_zone": ["privatelink.mariadb.database.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Search/searchServices/publicNetworkAccess"],
+    "subresource": "searchService",
+    "condition": "false",
+    "private_zone": ["privatelink.search.windows.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.ContainerRegistry/registries/publicNetworkAccess"],
+    "subresource": "registry",
+    "condition": "false",
+    "private_zone": ["privatelink.azurecr.io"]
+  },
+  { 
+    "resource_provider": ["Microsoft.AppConfiguration/configurationStores/publicNetworkAccess"],
+    "subresource": "configurationStores",
+    "condition": "false",
+    "private_zone": ["privatelink.azconfig.io"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Devices/IotHubs/publicNetworkAccess"],
+    "subresource": "iotHub",
+    "condition": "false",
+    "private_zone": ["privatelink.azure-devices.net", "privatelink.servicebus.windows.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.EventGrid/topics/publicNetworkAccess"],
+    "subresource": "topic",
+    "condition": "false",
+    "private_zone": ["privatelink.eventgrid.azure.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.EventGrid/domains/publicNetworkAccess"],
+    "subresource": "domain",
+    "condition": "false",
+    "private_zone": ["privatelink.eventgrid.azure.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Web/sites/siteConfig.publicNetworkAccess"],
+    "subresource": "sites",
+    "condition": "false",
+    "private_zone": ["privatelink.azurewebsites.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.MachineLearningServices/workspaces/publicNetworkAccess"],
+    "subresource": "amlworkspace",
+    "condition": "false",
+    "private_zone": ["privatelink.api.azureml.ms", "privatelink.notebooks.azure.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Insights/components/publicNetworkAccessForQuery", "Microsoft.Insights/components/publicNetworkAccessForIngestion"],
+    "subresource": "azuremonitor",
+    "condition": "false",
+    "private_zone": ["privatelink.monitor.azure.com","privatelink.oms.opinsights.azure.com","privatelink.ods.opinsights.azure.com","privatelink.agentsvc.azure-automation.net","privatelink.blob.core.windows.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.StorageSync/storageSyncServices/incomingTrafficPolicy"],
+    "subresource": "afs",
+    "condition": "false",
+    "private_zone": ["privatelink.afs.azure.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DataFactory/factories/publicNetworkAccess"],
+    "subresource": "dataFactory",
+    "condition": "false",
+    "private_zone": ["privatelink.datafactory.azure.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.DataFactory/factories/publicNetworkAccess"],
+    "subresource": "portal",
+    "condition": "false",
+    "private_zone": ["privatelink.adf.azure.com"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Cache/Redis/publicNetworkAccess"],
+    "subresource": "redisCache",
+    "condition": "false",
+    "private_zone": ["privatelink.redis.cache.windows.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Cache/Redis/publicNetworkAccess"],
+    "subresource": "redisEnterprise",
+    "condition": "false",
+    "private_zone": ["privatelink.redisenterprise.cache.azure.net"]
+  },
+  { 
+    "resource_provider": ["Microsoft.Batch/batchAccounts/publicNetworkAccess"],
+    "subresource": "batch account",
+    "condition": "false",
+    "private_zone": [""]
+  },
+  { 
+    "resource_provider": ["Microsoft.KeyVault/vaults/publicNetworkAccess"],
+    "subresource": "vault",
+    "condition": "false",
+    "private_zone": [""]
+  },
+  {
+    "resource_provider": ["Microsoft.CognitiveServices/accounts/networkAcls.defaultAction"],
+    "subresource": "account",
+    "condition": "Deny",
+    "private_zone": ["privatelink.weu.batch.azure.com"]
+  },
+  {
+    "resource_provider": ["Microsoft.Storage/storageAccounts/networkAcls.defaultAction"],
+    "subresource": "blob",
+    "condition": "Deny",
+    "private_zone": ["privatelink.blob.core.windows.net"]
+  },
+  {
+    "resource_provider": ["Microsoft.Storage/storageAccounts/networkAcls.defaultAction"],
+    "subresource": "dfs",
+    "condition": "Deny",
+    "private_zone": ["privatelink.dfs.core.windows.net"]
+  },
+  {
+    "resource_provider": ["Microsoft.Storage/storageAccounts/networkAcls.defaultAction"],
+    "subresource": "file",
+    "condition": "Deny",
+    "private_zone": ["privatelink.file.core.windows.net"]
+  },
+  {
+    "resource_provider": ["Microsoft.Storage/storageAccounts/networkAcls.defaultAction"],
+    "subresource": "queue",
+    "condition": "Deny",
+    "private_zone": ["privatelink.queue.core.windows.net"]
+  },
+  {
+    "resource_provider": ["Microsoft.SignalRService/SignalR/networkAcls.defaultAction"],
+    "subresource": "signalR",
+    "condition": "Deny",
+    "private_zone": ["privatelink.service.signalr.net"]
+  },
+  {
+    "resource_provider": ["Microsoft.Storage/storageAccounts/networkAcls.defaultAction"],
+    "subresource": "table",
+    "condition": "Deny",
+    "private_zone": ["privatelink.table.core.windows.net"]
+  },
+  {
+    "resource_provider": ["Microsoft.Storage/storageAccounts/networkAcls.defaultAction"],
+    "subresource": "web",
+    "condition": "Deny",
+    "private_zone": [" privatelink.web.core.windows.net"]
+  }
+]

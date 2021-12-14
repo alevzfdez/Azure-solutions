@@ -1,15 +1,8 @@
 # README #
 
-Just small tooling scripts for daily use 😁
+Azure solutions deployment and small tools for daily use 😁
 
 
-# Tools #
-
-The tools include but not limited to the following list.
-
-## Cloud computing
-### Azure
- - Private DNS zones creator script [Shell Script / AZ CLI]
 
 ## LICENSE
 ### GNU GPL v3

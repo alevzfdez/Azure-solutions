@@ -1,0 +1,40 @@
+{
+  "mode": "All",
+  "metadata": {
+    "category": "DNS",
+    "securityCenter": {
+      "RemediationDescription" : "Disabling the public network access property shuts down public connectivity such that can only be accessed from a private endpoint. Learn more at: https://aka.ms/privateendpoints.",
+      "Severity": "Medium"
+    }
+  },
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "anyOf": {{resource_provider_1}}
+        },
+        {
+          "anyOf": {{resource_provider_2}}
+        }
+      ]
+    },
+    "then": {
+      "effect": "[parameters('effect')]"
+    }
+  },
+  "parameters": {
+    "effect": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Audit"
+    }
+  }
+}
