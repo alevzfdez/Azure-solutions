@@ -2,7 +2,7 @@
 
 ## Private Link and DNS integration at scale
 
-This repo use python scripts in order to deploy "Private Link and DNS integration at scale" solution provided by [Microsoft](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns).
+This repo use python scripts in order to deploy "Private Link and DNS integration at scale" solution provided by [Microsoft](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
 This article describes how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub and spoke network architectures.
 
