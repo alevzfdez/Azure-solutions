@@ -177,13 +177,13 @@
     "resource_provider": ["Microsoft.Batch/batchAccounts/publicNetworkAccess"],
     "subresource": "batch account",
     "condition": "false",
-    "private_zone": [""]
+    "private_zone": ["privatelink.weu.batch.azure.com"]
   },
   { 
     "resource_provider": ["Microsoft.KeyVault/vaults/publicNetworkAccess"],
     "subresource": "vault",
     "condition": "false",
-    "private_zone": [""]
+    "private_zone": ["privatelink.vaultcore.azure.net"]
   },
   {
     "resource_provider": ["Microsoft.CognitiveServices/accounts/networkAcls.defaultAction"],

@@ -7,7 +7,7 @@ This repo use python scripts in order to deploy "Private Link and DNS integratio
 This article describes how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub and spoke network architectures.
 
 Scripts used by this repo has 2 main tasks:
-1.  Deploy all required private zones from input file at scale.
+1. Deploy all required private zones from input file at scale.
 2. Deploy all required policies in order to deny public access and deploy if not exist resource DNS entry on private endpoints.
 
 

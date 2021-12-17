@@ -8,6 +8,6 @@ echo -e "\nSystem OS required packages installed."
 # 2. Initialize virtual environment and install script requirements
 virtualenv -p python3 venv
 . venv/bin/activate
-pip3 install -r src/requirements.txt
+pip3 install -r requirements.txt
 
 echo -e "\nPython3 required modules installed."
