@@ -105,6 +105,7 @@ def az_pdefinition(args, pzone):
           '" --rules "' + str(policy_def['rules']).replace('"', '\\"') + \
           '" --params "' + str(policy_def['params']).replace('"', '\\"') + '"'
 
+        az_cli_cmd = az_cli_cmd.replace('$', "\$")
         logging.debug(az_cli_cmd)
         policy_def_out.append(json.loads(subprocess.check_output(az_cli_cmd, shell=True)))
       else:
