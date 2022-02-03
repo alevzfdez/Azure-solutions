@@ -22,6 +22,10 @@ def load_argparse():
                       help='Azure Management Group where policy definition will be apply.')
   parser.add_argument('--file_zones', '-fz', dest='zone_list', required=True,
                       help='File with all required zones following template on folder.')
+  parser.add_argument('--rg-pzone', '-rg', dest='rg_pzone', required=True,
+                      help='Resource group name where private DNS zones are located.')
+  parser.add_argument('--subs-pzone', '-subs', dest='subs_pzone', required=True,
+                      help='Subscription name where private DNS zones group is located')
 
   # Check & set args
   return parser.parse_args()
@@ -84,6 +88,9 @@ def az_pdefinition(args, pzone):
           break
         else:
           ffile = ffile.replace('{{private_zone}}', str(priv_zone))
+          get_subs_rg = 'az group show --name ' + args.rg_pzone + ' --subscription ' + args.subs_pzone
+          rg_subs = json.loads(subprocess.check_output(get_subs_rg, shell=True))
+          ffile = ffile.replace('{{rg_subs}}', str(rg_subs['id']))
 
         templ = json.loads(ffile.replace('', ''))
 
@@ -174,7 +181,7 @@ def az_pinitassignment(args, set_name):
       ' --scope "' + mgroup_out['id'] + '"' + \
       ' --name "' + set_name + '"' + \
       ' --policy-set-definition "' + initiative_out + '"' + \
-      ' --assign-identity'+ \
+      ' --mi-system-assigned'+ \
       ' --location "' + location_mg + '"'
 
     logging.debug(az_cli_cmd)
